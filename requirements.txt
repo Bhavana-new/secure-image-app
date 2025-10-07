@@ -6,3 +6,5 @@ Pillow==11.3.0
 
 
 cryptography==41.0.3
+gunicorn==21.2.0
+
