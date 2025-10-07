@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Access Secret</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h1>Enter Token to Access Secret</h1>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <ul class="flash">{% for msg in messages %}<li>{{ msg }}</li>{% endfor %}</ul>
+    {% endif %}
+    {% endwith %}
+    <form method="POST">
+        <input type="text" name="token" placeholder="Enter token" required>
+        <button type="submit">Decrypt & Download</button>
+    </form>
+</div>
+</body>
+</html>

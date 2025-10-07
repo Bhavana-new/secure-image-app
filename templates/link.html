@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Encrypted Link</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h1>Your Encrypted Link</h1>
+    <p>Share this link with your recipient:</p>
+    <a href="{{ link }}" class="share-link">{{ link }}</a>
+    <p><strong>One-Time Token:</strong> {{ token }}</p>
+    <p>Send link via WhatsApp, Email, etc.</p>
+    <a href="{{ url_for('index') }}" class="button">Encrypt Another File</a>
+</div>
+</body>
+</html>

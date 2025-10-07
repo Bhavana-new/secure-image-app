@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Secure Image Upload</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h1>Encrypt Your Secret</h1>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <ul class="flash">
+        {% for msg in messages %}<li>{{ msg }}</li>{% endfor %}
+        </ul>
+    {% endif %}
+    {% endwith %}
+    <form method="POST" enctype="multipart/form-data">
+        <label>Secret File:</label>
+        <input type="file" name="secret_file" required><br><br>
+        <label>Cover Image (PNG):</label>
+        <input type="file" name="cover_image" accept="image/png" required><br><br>
+        <button type="submit">Encrypt & Generate Link</button>
+    </form>
+</div>
+</body>
+</html>
