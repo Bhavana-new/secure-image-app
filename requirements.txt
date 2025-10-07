@@ -1,4 +1,9 @@
 Flask==3.0.3
-Pillow==10.2.0 --only-binary :all:
+Pillow==10.4.0
+Flask==3.0.3
+Pillow==11.3.0 --only-binary :all:
+
+
+
 
 cryptography==41.0.3
